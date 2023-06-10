@@ -7,10 +7,10 @@ import os
 os.environ["OPENAI_API_KEY"] = "[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]"
 
 with open("state_of_the_union.txt") as f:
-    state_of_the_union = f.read()
+    document = f.read()
 
 text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
-texts = text_splitter.split_text(state_of_the_union)
+texts = text_splitter.split_text(document)
 
 embeddings = OpenAIEmbeddings()
 
