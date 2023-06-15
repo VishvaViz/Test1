@@ -1,20 +1,124 @@
-First Lady Jill Biden will welcome guests to join her in the viewing box for President Biden’s State of the Union Address on Tuesday, February 7, 2023. 
+The Python Tutorial:
 
-Each of these individuals were invited by the White House because they personify issues or themes to be addressed by the President in his speech, or they embody the Biden-Harris Administration’s policies at work for the American people.
+Python is an easy to learn, powerful programming language. It has efficient high-level data structures and a simple but effective approach to object-oriented programming. Python’s elegant syntax and dynamic typing, together with its interpreted nature, make it an ideal language for scripting and rapid application development in many areas on most platforms.
 
-The Second Gentleman, Mr. Douglas Emhoff, will also join the First Lady in the viewing box.   
- 
-In recognition of sustained U.S. support for Ukraine nearly a year after Russia launched its unprovoked attack, the First Lady has again invited the Ambassador of Ukraine, Oksana Markarova, to join her as a guest for the State of the Union. 
+The Python interpreter and the extensive standard library are freely available in source or binary form for all major platforms from the Python web site, https://www.python.org/, and may be freely distributed. The same site also contains distributions of and pointers to many free third party Python modules, programs and tools, and additional documentation.
 
-The Barrons’ three-year old daughter, Ava, is a survivor of a rare form of pediatric cancer. Mr. Barron penned a letter to the President to express gratitude for the Bidens’ commitment to the Cancer Moonshot initiative and share their experience as parents and caregivers of a child with cancer. 
+The Python interpreter is easily extended with new functions and data types implemented in C or C++ (or other languages callable from C). Python is also suitable as an extension language for customizable applications.
 
-In 2022, Ava’s doctors gave the Barrons good news by officially declaring her in remission. 
+This tutorial introduces the reader informally to the basic concepts and features of the Python language and system. It helps to have a Python interpreter handy for hands-on experience, but all examples are self-contained, so the tutorial can be read off-line as well.
 
-Their family’s story is one of hope and possibility, inspiring us to continue working towards a future where we end cancer as we know it.
+For a description of standard objects and modules, see The Python Standard Library. The Python Language Reference gives a more formal definition of the language. To write extensions in C or C++, read Extending and Embedding the Python Interpreter and Python/C API Reference Manual. There are also several books covering Python in depth.
 
-Bonar is an enrolled member of Navajo Nation. She was a sergeant and former medic in the U.S. Army. 
+This tutorial does not attempt to be comprehensive and cover every single feature, or even every commonly used feature. Instead, it introduces many of Python’s most noteworthy features, and will give you a good idea of the language’s flavor and style. After reading it, you will be able to read and write Python modules and programs, and you will be ready to learn more about the various Python library modules described in The Python Standard Library.
 
-She spent 19 years providing clinical care as a Registered Nurse and Executive at the Tuba City Regional Health Care Corporation, including eight years as Chief Executive Officer. 
+An Informal Introduction to Python:
 
-In 2019, Dr. Biden joined Bonar to celebrate the opening of the Tuba City Regional Health Care Corporation’s Specialty Care Center which was the first cancer center opened on a Native American reservation, bringing cancer treatment and other oncology services to the Navajo, Hopi, and San Juan Southern Paiute tribal members who previously had to travel great distances to receive care. 
- 
+In the following examples, input and output are distinguished by the presence or absence of prompts (>>> and …): to repeat the example, you must type everything after the prompt, when the prompt appears; lines that do not begin with a prompt are output from the interpreter. Note that a secondary prompt on a line by itself in an example means you must type a blank line; this is used to end a multi-line command.
+
+You can toggle the display of prompts and output by clicking on >>> in the upper-right corner of an example box. If you hide the prompts and output for an example, then you can easily copy and paste the input lines into your interpreter.
+
+Many of the examples in this manual, even those entered at the interactive prompt, include comments. Comments in Python start with the hash character, #, and extend to the end of the physical line. A comment may appear at the start of a line or following whitespace or code, but not within a string literal. A hash character within a string literal is just a hash character. Since comments are to clarify code and are not interpreted by Python, they may be omitted when typing in examples.
+
+Data Structures:
+
+This chapter describes some things you’ve learned about already in more detail, and adds some new things as well.
+
+5.1. More on Lists
+The list data type has some more methods. Here are all of the methods of list objects:
+
+list.append(x)
+Add an item to the end of the list. Equivalent to a[len(a):] = [x].
+
+list.extend(iterable)
+Extend the list by appending all the items from the iterable. Equivalent to a[len(a):] = iterable.
+
+list.insert(i, x)
+Insert an item at a given position. The first argument is the index of the element before which to insert, so a.insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).
+
+list.remove(x)
+Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.
+
+list.pop([i])
+Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and returns the last item in the list. (The square brackets around the i in the method signature denote that the parameter is optional, not that you should type square brackets at that position. You will see this notation frequently in the Python Library Reference.)
+
+list.clear()
+Remove all items from the list. Equivalent to del a[:].
+
+list.index(x[, start[, end]])
+Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there is no such item.
+
+The optional arguments start and end are interpreted as in the slice notation and are used to limit the search to a particular subsequence of the list. The returned index is computed relative to the beginning of the full sequence rather than the start argument.
+
+list.count(x)
+Return the number of times x appears in the list.
+
+list.sort(*, key=None, reverse=False)
+Sort the items of the list in place (the arguments can be used for sort customization, see sorted() for their explanation).
+
+list.reverse()
+Reverse the elements of the list in place.
+
+list.copy()
+Return a shallow copy of the list. Equivalent to a[:].
+
+Introduction:
+
+Overview:
+
+Looking for ChatGPT? Head to chat.openai.com.
+The OpenAI API can be applied to virtually any task that requires understanding or generating natural language and code. The OpenAI API can also be used to generate and edit images or convert speech into text. We offer a range of models with different capabilities and price points, as well as the ability to fine-tune custom models.
+
+Resources
+Experiment in the playground
+Read the API reference
+Visit the help center
+View the current API status
+Check out the OpenAI Developer Forum
+Learn about our usage policies
+Key concepts
+GPTs
+OpenAI's GPT (generative pre-trained transformer) models have been trained to understand natural language and code. GPTs provide text outputs in response to their inputs. The inputs to GPTs are also referred to as "prompts". Designing a prompt is essentially how you “program” a GPT model, usually by providing instructions or some examples of how to successfully complete a task. GPTs can be used across a great variety of tasks including content or code generation, summarization, conversation, creative writing, and more. Read more in our introductory GPT guide and in our GPT best practices guide.
+
+Embeddings
+An embedding is a vector representation of a piece of data (e.g. some text) that is meant to preserve aspects of its content and/or its meaning. Chunks of data that are similar in some way will tend to have embeddings that are closer together than unrelated data. OpenAI offers text embedding models that take as input a text string and produce as output an embedding vector. Embeddings are useful for search, clustering, recommendations, anomaly detection, classification, and more. Read more about embeddings in our embeddings guide.
+
+Tokens
+GPT and embeddings models process text in chunks called tokens. Tokens represent commonly occurring sequences of characters. For example, the string " tokenization" is decomposed as " token" and "ization", while a short and common word like " the" is represented as a single token. Note that in a sentence, the first token of each word typically starts with a space character. Check out our tokenizer tool to test specific strings and see how they are translated into tokens. As a rough rule of thumb, 1 token is approximately 4 characters or 0.75 words for English text.
+
+One limitation to keep in mind is that for a GPT model the prompt and the generated output combined must be no more than the model's maximum context length. For embeddings models (which do not output tokens), the input must be shorter than the model's maximum context length. The maximum context lengths for each GPT and embeddings model can be found in the model index.
+OpenAI has trained cutting-edge language models that are very good at understanding and generating text. Our API provides access to these models and can be used to solve virtually any task that involves processing language.
+
+In this quickstart tutorial, you’ll build a simple sample application. Along the way, you’ll learn key concepts and techniques that are fundamental to using the API for any task, including:
+
+Content generation
+Summarization
+Classification, categorization, and sentiment analysis
+Data extraction
+Translation
+Many more!
+Introduction
+The completions endpoint is the core of our API and provides a simple interface that’s extremely flexible and powerful. You input some text as a prompt, and the API will return a text completion that attempts to match whatever instructions or context you gave it.
+
+Prompt
+Write a tagline for an ice cream shop.
+Completion
+We serve up smiles with every scoop!
+You can think of this as a very advanced autocomplete — the model processes your text prompt and tries to predict what’s most likely to come next.
+
+Bank Inrest:
+
+Higher rates and recession fears losing effect on the market
+While the Fed has already raised rates ten times during this tightening cycle, it’s easy to spot when markets really sat up and took notice that the central bank wasn’t kidding that it was about to recalibrate monetary policy. It was November 2021 when cryptocurrency and many of the riskiest stocks peaked.
+
+“The stock market will never not worry about future interest rates,” says Steve Azoury, head of Azoury Financial in Troy, Michigan. “The cost of borrowing impacts all areas of investing, purchasing and savings. Just the anticipation of what may happen is enough to cause a stock market reaction.”
+
+But higher rates seem to be frightening investors less these days, as they anticipate the future path of interest rates may be peaking.
+
+“I think markets are far less anxious about interest rate hikes now than in Q3 and Q4 2022,” says Dan Raju, CEO of Tradier, a brokerage platform. “With the better-than-expected recent inflation numbers, the Fed and investors feel like they have some control on inflation. It seems now everyone sees a path to an eventual holding off of rate hikes.”
+
+While major stock indexes such as the Standard & Poors 500 spent most of 2022 in a funk, equities seem to have found a floor since October. They’ve fared well to start the year, with the S&P 500 up more than 13 percent, while the Nasdaq Composite has climbed around 30  percent.
+
+But what about the highly expected recession? The market’s recent relative strength suggests that investors may be more optimistic – or at least, less pessimistic – than they were in 2022.
+
+Whether a recession happens and its potential severity are major uncertainties now, says Brian Spinelli, co-chief investment officer at wealth advisor Halbert Hargrove in Long Beach, California. “Stocks are forward-looking and our best estimate is a mild recession has been anticipated in current prices. If we end up in a deeper recession, that is likely not priced into markets today.”
